@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+      <meta content="utf-8" http-equiv="encoding">
+
+      <link rel="stylesheet" type="text/css" href=site.css>
+      <script src="stock-tracker.js"></script>
+      <!-- load the d3.js library -->	
+      <script src="http://d3js.org/d3.v5.min.js"></script>
+      <!-- <script src = "https://d3js.org/d3.v4.min.js"></script> -->
+  </head>
+  <body>
+    <span class="content">
+    <!-- Trigger/Open The Modal -->
+    <input type="text" placeholder="Enter the ticker of stock you want to see! Ex. : IBM" id="myInput" required autofocus>
+    <button id="myBtn" type="submit" onclick="openModal()">Open Stock Tracker</button>
+    </span>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="wrapper" class="wrapper">
+          <div id="tooltip" class="tooltip">
+            <div class="tooltip-upper">
+              <span id="date"></span>
+            </div>
+            <div class="tooltip-lower">
+              <div id="lower-open-close"></div>
+              <div id="lower-high-low"></div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
